@@ -29,7 +29,7 @@ class LandingViewModel: ViewModel() {
                 _state.value = _state.value.copy(itemAmounts = itemList, inputAmount = 0.00, totalAmount = total)
             }
             else -> {
-                val newAmount = (_state.value.inputAmount * 10) + (key.toDouble() / 100)
+                val newAmount = BigDecimal((_state.value.inputAmount * 10) + (key.toDouble() / 100)).setScale(2, RoundingMode.DOWN).toDouble()
 
                 if(newAmount >= 1000000.00) {
                     return
