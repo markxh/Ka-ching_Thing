@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Ka-ching Thing</string>
+    <string name="amount_with_currency">R %1$s</string>
 </resources>
